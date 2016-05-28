@@ -1,0 +1,22 @@
+p This example shows you how a rails app will handle pi calculation
+= form_tag(calculate_pi_position_index_index_path, remote: true, method: :get, id: 'pi_form', class: 'form-horizontal result') do
+  div.form-group
+    label.col-sm-2.control-label Введите число для поиска в PI
+
+    div.col-sm-2
+      = text_field_tag(:number, nil, class: 'form-control')
+
+    div.col-sm-2
+      = submit_tag('Подсчитать', class: 'btn btn-success')
+
+p This example shows you benchmark on PI search in GoLang
+
+= form_tag(calculate_go_pi_position_index_index_path, remote: true, method: :get, id: 'pi_form', class: 'form-horizontal result') do
+  div.form-group
+    label.col-sm-2.control-label Введите число для поиска в PI
+
+    div.col-sm-2
+      = text_field_tag(:number, nil, class: 'form-control')
+
+    div.col-sm-2
+      = submit_tag('Подсчитать', class: 'btn btn-success')
