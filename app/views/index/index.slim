@@ -1,7 +1,7 @@
-p This example shows you how a rails app will handle pi calculation
-= form_tag(calculate_pi_position_index_index_path, remote: true, method: :get, id: 'pi_form', class: 'form-horizontal result') do
+p Rails
+= form_tag(calculate_sum_index_index_path, remote: true, method: :get, id: 'number_form_rails', class: 'form-horizontal result') do
   div.form-group
-    label.col-sm-2.control-label Введите число для поиска в PI
+    label.col-sm-2.control-label Введите количество елементов ряда
 
     div.col-sm-2
       = text_field_tag(:number, nil, class: 'form-control')
@@ -9,11 +9,35 @@ p This example shows you how a rails app will handle pi calculation
     div.col-sm-2
       = submit_tag('Подсчитать', class: 'btn btn-success')
 
-p This example shows you benchmark on PI search in GoLang
+p GoLang
 
-= form_tag(calculate_go_pi_position_index_index_path, remote: true, method: :get, id: 'pi_form', class: 'form-horizontal result') do
+= form_tag(calculate_sum_go_index_index_path, remote: true, method: :get, id: 'number_form_go', class: 'form-horizontal result') do
   div.form-group
-    label.col-sm-2.control-label Введите число для поиска в PI
+    label.col-sm-2.control-label Введите количество елементов ряда
+
+    div.col-sm-2
+      = text_field_tag(:number, nil, class: 'form-control')
+
+    div.col-sm-2
+      = submit_tag('Подсчитать', class: 'btn btn-success')
+
+p GoLang with goroutines
+
+= form_tag(calculate_sum_go_routines_index_index_path, remote: true, method: :get, id: 'number_form_go_routines', class: 'form-horizontal result') do
+  div.form-group
+    label.col-sm-2.control-label Введите количество елементов ряда
+
+    div.col-sm-2
+      = text_field_tag(:number, nil, class: 'form-control')
+
+    div.col-sm-2
+      = submit_tag('Подсчитать', class: 'btn btn-success')
+
+p GoLang straight
+
+= form_tag('http://localhost:3000/calculate_sum', remote: true, method: :get, id: 'number_form_go_str', class: 'form-horizontal result') do
+  div.form-group
+    label.col-sm-2.control-label Введите количество елементов ряда
 
     div.col-sm-2
       = text_field_tag(:number, nil, class: 'form-control')

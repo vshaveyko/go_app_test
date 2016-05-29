@@ -17,6 +17,7 @@ WORKDIR /usr/src/app
 
 COPY . /usr/src/app
 
+RUN gem update --system
 RUN gem update bundler
 RUN bundle install --path vendor/bundle --without development test doc --deployment --jobs=4
 RUN bundle exec rake assets:precompile

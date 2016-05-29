@@ -7,11 +7,13 @@ Rails.application.routes.draw do
   get 'database_test', to: 'index#database_test'
 
   resources :index, only: :index do
-    get 'calculate_pi_position', on: :collection
-    get 'calculate_go_pi_position', on: :collection
+    get 'calculate_sum', on: :collection
+    get 'calculate_sum_go', on: :collection
+    get 'calculate_sum_go_routines', on: :collection
     get 'database_insert', on: :collection
     get 'database_insert_go', on: :collection
   end
+
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 

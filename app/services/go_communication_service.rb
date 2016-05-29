@@ -7,7 +7,7 @@ class GoCommunicationService
 
   class << self
     def send_request(url, params:)
-      http_client.get("/#{url}", params)
+      http_client.get("/#{url}", params).body
     end
 
     def http_client

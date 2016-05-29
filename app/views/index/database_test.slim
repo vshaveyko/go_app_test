@@ -1,5 +1,5 @@
-p This example shows you benchmark on database insert in rails
-= form_tag(database_insert_index_index_path, remote: true, method: :get, id: 'database_form', class: 'form-horizontal result') do
+p Rails
+= form_tag(database_insert_index_index_path, remote: true, method: :get, id: 'database_form_rails', class: 'form-horizontal') do
   div.form-group
     label.col-sm-2.control-label Введите число для тестирование скорости
 
@@ -9,9 +9,9 @@ p This example shows you benchmark on database insert in rails
     div.col-sm-2
       = submit_tag('Подсчитать', class: 'btn btn-success')
 
-p This example shows you benchmark on database insert in GoLang
+p GoLang
 
-= form_tag(database_insert_go_index_index_path, remote: true, method: :get, id: 'database_form', class: 'form-horizontal result') do
+= form_tag(database_insert_go_index_index_path, remote: true, method: :get, id: 'database_form_go', class: 'form-horizontal') do
   div.form-group
     label.col-sm-2.control-label Введите число для тестирование скорости
 
