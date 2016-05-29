@@ -21,7 +21,6 @@ class IndexController < ApplicationController
      result = ::GoCalculateSumService.(params[:number])
     end.real
 
-    puts result
     render json: { result: result, time: time_taken }
   end
 
@@ -31,7 +30,6 @@ class IndexController < ApplicationController
      result = ::GoCalculateSumService.(params[:number], with_routines: true)
     end.real
 
-    puts result
     render json: { result: result, time: time_taken }
   end
 

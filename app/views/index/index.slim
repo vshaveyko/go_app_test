@@ -1,5 +1,5 @@
 p Rails
-= form_tag(calculate_sum_index_index_path, remote: true, method: :get, id: 'number_form_rails', class: 'form-horizontal result') do
+= form_tag(calculate_sum_index_index_path, remote: true, method: :get, id: 'number_form_rails', class: 'form-horizontal') do
   div.form-group
     label.col-sm-2.control-label Введите количество елементов ряда
 
@@ -11,7 +11,7 @@ p Rails
 
 p GoLang
 
-= form_tag(calculate_sum_go_index_index_path, remote: true, method: :get, id: 'number_form_go', class: 'form-horizontal result') do
+= form_tag(calculate_sum_go_index_index_path, remote: true, method: :get, id: 'number_form_go', class: 'form-horizontal') do
   div.form-group
     label.col-sm-2.control-label Введите количество елементов ряда
 
@@ -23,7 +23,7 @@ p GoLang
 
 p GoLang with goroutines
 
-= form_tag(calculate_sum_go_routines_index_index_path, remote: true, method: :get, id: 'number_form_go_routines', class: 'form-horizontal result') do
+= form_tag(calculate_sum_go_routines_index_index_path, remote: true, method: :get, id: 'number_form_go_routines', class: 'form-horizontal') do
   div.form-group
     label.col-sm-2.control-label Введите количество елементов ряда
 
@@ -35,7 +35,7 @@ p GoLang with goroutines
 
 p GoLang straight
 
-= form_tag('http://localhost:3000/calculate_sum', remote: true, method: :get, id: 'number_form_go_str', class: 'form-horizontal result') do
+= form_tag('http://localhost:3000/calculate_sum', remote: true, method: :get, id: 'number_form_go_str', class: 'form-horizontal') do
   div.form-group
     label.col-sm-2.control-label Введите количество елементов ряда
 

@@ -1,7 +1,5 @@
 class GoCommunicationService
 
-  NoHTTPClientSet = Class.new(StandardError)
-
   @host = ENV['GO_HOST']
   @port = ENV['GO_PORT']
 

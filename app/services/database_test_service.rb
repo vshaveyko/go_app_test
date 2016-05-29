@@ -7,15 +7,21 @@ class DatabaseTestService
   end
 
   def test(number)
-    number.to_i.times do |n|
-      User.create(user_attributes(n))
-    end
-    User.all.each do |user|
-      user.destroy
-    end
+    create_users(number)
+    destroy_users
   end
 
   private
+
+  def create_users(number)
+    number.to_i.times do |n|
+      User.create(user_attributes(n))
+    end
+  end
+
+  def destroy_users
+    User.all.each(&:destroy)
+  end
 
   def user_attributes(n)
     {
